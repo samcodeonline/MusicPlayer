@@ -28,5 +28,5 @@ interface ApiInterface {
 //    the librarian will search for books related to Harry Potter and give you a list of those books.
 //    Similarly, in the code, when you call "getData" with a specific query,
 //    it will fetch a list of "MyData" items related to that query from somewhere, like the internet.
-    fun getData(@Query("q") query: String) : Call<List<MyData>>
+    fun getData(@Query("q") query: String) : Call<MyData>
 }
