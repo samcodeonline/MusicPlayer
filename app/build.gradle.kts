@@ -54,5 +54,7 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 //    converter
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+//    picasso for converting image link
+    implementation ("com.squareup.picasso:picasso:2.8")
 
 }
