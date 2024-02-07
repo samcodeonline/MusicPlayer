@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
 
         val retrofitData = retrofitBuilder.getData("eminem")
 
-        retrofitData.enqueue(object : Callback <MyData?>  {
-            override fun onResponse(call: Call <MyData?> , response: Response <MyData?> ) {
+        retrofitData.enqueue(object : Callback<MyData?>  {
+            override fun onResponse(call: Call<MyData?> , response: Response<MyData?> ) {
 //                if success it would be excuted
                 val dataList = response.body()?.data
                 val textView = findViewById<TextView>(R.id.helloText)
