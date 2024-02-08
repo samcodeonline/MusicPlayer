@@ -14,6 +14,22 @@ import com.squareup.picasso.Picasso
 
 class MyAdapter(val context: Activity, val dataList: List<Data>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val image: ImageView
+        val title: TextView
+        val play: ImageButton
+        val pause: ImageButton
+
+        init {
+            image = itemView.findViewById(R.id.musicImage)
+            title = itemView.findViewById(R.id.musicTitle)
+            play = itemView.findViewById(R.id.btnPlay)
+            pause = itemView.findViewById(R.id.btnPause)
+        }
+
+
+    }
 
     /*
 Imagine you have a box (RecyclerView) to
@@ -42,7 +58,7 @@ display toys (data) neatly. "MyAdapter"
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-            //populate the data into the view
+        //populate the data into the view
 
         val currentData = dataList[position]
 
@@ -62,22 +78,5 @@ display toys (data) neatly. "MyAdapter"
 
     }
 
-
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        val image: ImageView
-        val title: TextView
-        val play: ImageButton
-        val pause: ImageButton
-
-        init {
-            image = itemView.findViewById(R.id.musicImage)
-            title = itemView.findViewById(R.id.musicTitle)
-            play = itemView.findViewById(R.id.btnPlay)
-            pause = itemView.findViewById(R.id.btnPause)
-        }
-
-
-    }
 
 }
