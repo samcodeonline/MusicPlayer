@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
           "retrofitBuilder.getData("eminem")" tells the teacher what
           information you need. ".enqueue()" is like telling the
           teacher to reply later.
-          Inside, "object : Callback<List<MyData>?>"
+          Inside, "object : Callback<MyData?>"
           is how we listen for the teacher's response. "onResponse()"
           is when the teacher answers your question. "onFailure()"
            is if the teacher couldn't find the answer.
