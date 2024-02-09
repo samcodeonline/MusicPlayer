@@ -17,14 +17,11 @@ import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var myRecyclerView: RecyclerView
+    var myRecyclerView: RecyclerView = findViewById(R.id.recyclerView)
     lateinit var myAdapter: MyAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        myRecyclerView = findViewById(R.id.recyclerView)
-
 
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl("https://deezerdevs-deezer.p.rapidapi.com/")
